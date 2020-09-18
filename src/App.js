@@ -10,7 +10,7 @@ export const ThemeContext = React.createContext();
 //to re render the component to change the context we want some state 
 //as context doesn't re render the component. 
 function App() {
-  const [theme, setTheme] = useState("red");
+  const [theme, setTheme] = useState("green");
   return (
     <ThemeContext.Provider value={{backgroundColor: theme}}>
       Counter 1
@@ -19,7 +19,7 @@ function App() {
       Counter Hooks
       <CounterHooks initialCount={0}/>
       <br />
-      <button onClick={() => setTheme(prevTheme => {return prevTheme === "red" ? "blue" : "red"})}>Toggle Theme</button>
+      <button onClick={() => setTheme(prevTheme => {return prevTheme === "green" ? "blue" : "green"})}>Toggle Theme</button>
     </ThemeContext.Provider>
   );
 }
